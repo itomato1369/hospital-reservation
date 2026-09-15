@@ -1,0 +1,235 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* ======================
+   背景
+====================== */
+
+.login-page {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef9f5 0%,
+            #ffffff 60%,
+            #f6fbff 100%
+        );
+}
+
+/* ======================
+   コンテナ
+====================== */
+
+.login-container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 24px;
+}
+
+/* ======================
+   カード
+====================== */
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    background: white;
+
+    border-radius: 32px;
+
+    padding: 48px;
+
+    box-shadow:
+        0 20px 60px rgba(
+            0,
+            0,
+            0,
+            .08
+        );
+}
+
+/* ======================
+   ヘッダー
+====================== */
+
+.login-header {
+
+    text-align: center;
+
+    margin-bottom: 48px;
+}
+
+.clinic-icon {
+
+    width: clamp(
+        100px,
+        15vw,
+        140px
+    );
+
+    height: clamp(
+        100px,
+        15vw,
+        140px
+    );
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+.login-title {
+
+    color: #2b5547;
+
+    font-size:
+        clamp(
+            2rem,
+            5vw,
+            2.6rem
+        );
+
+    font-weight: 700;
+}
+
+.login-subtitle {
+
+    color: #61726b;
+
+    margin-top: 12px;
+}
+
+/* ======================
+   ラベル
+====================== */
+
+.col-form-label {
+
+    color: #3b4d46;
+
+    font-weight: 600;
+}
+
+/* ======================
+   入力欄
+====================== */
+
+:deep(.p-inputtext),
+:deep(.p-password-input::place) {
+
+    height: 48px;
+
+    border-radius: 12px;
+}
+:deep(.p-inputtext::placeholder),
+:deep(.p-password-input::placeholder) {
+
+    font-size: 1rem;
+
+    color: #7a8a83;
+}
+:deep(.p-password) {
+    width: 100%;
+}
+
+:deep(.p-password-input) {
+    width: 100%;
+}
+/* ======================
+   フォーカス
+====================== */
+
+:deep(.p-inputtext:focus),
+:deep(.p-password-input:focus) {
+
+    border-color: #45a17d;
+
+    box-shadow:
+        0 0 0 .2rem
+        rgba(
+            69,
+            161,
+            125,
+            .18
+        );
+}
+
+/* ======================
+   ボタン
+====================== */
+
+.button-group {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+}
+
+:deep(.back-btn),
+:deep(.login-btn) {
+
+    min-width: 180px;
+
+    height: 52px;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+
+    transition: all .2s ease;
+}
+
+:deep(.login-btn) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #45a17d,
+            #5bb892
+        );
+
+    border: none;
+}
+
+:deep(.back-btn:hover),
+:deep(.login-btn:hover) {
+
+    transform: translateY(-2px);
+}
+
+/* ======================
+   スマホ
+====================== */
+
+@media (max-width: 768px) {
+
+    .login-card {
+
+        padding: 24px;
+    }
+
+    .button-group {
+
+        flex-direction: column;
+        align-items: center;
+    }
+}

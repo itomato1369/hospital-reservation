@@ -1,0 +1,250 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* ======================
+   ページ背景
+====================== */
+
+.reservation-page {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef9f5 0%,
+            #ffffff 60%,
+            #f6fbff 100%
+        );
+}
+
+/* ======================
+   コンテナ
+====================== */
+
+.reservation-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+}
+
+/* ======================
+   カード
+====================== */
+
+.reservation-card {
+
+    background: white;
+
+    border-radius: 32px;
+
+    padding: 48px;
+
+    box-shadow:
+        0 20px 60px rgba(
+            0,
+            0,
+            0,
+            .08
+        );
+}
+
+/* ======================
+   ヘッダー
+====================== */
+
+.reservation-header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.reservation-title {
+
+    color: #2b5547;
+
+    font-size:
+        clamp(
+            2rem,
+            5vw,
+            2.6rem
+        );
+
+    font-weight: 700;
+}
+
+.reservation-subtitle {
+
+    color: #3b4d46;
+
+    margin-top: 12px;
+
+    font-size: 1.4rem;
+
+    font-weight: 600;
+}
+
+.reservation-description {
+
+    color: #61726b;
+
+    margin-top: 12px;
+}
+
+/* ======================
+   アイコン
+====================== */
+
+.clinic-icon {
+
+    width:
+        clamp(
+            100px,
+            15vw,
+            140px
+        );
+
+    height:
+        clamp(
+            100px,
+            15vw,
+            140px
+        );
+
+    object-fit: contain;
+
+    margin-bottom: 24px;
+
+    border-radius: 50%;
+
+    padding: 10px;
+
+    background: white;
+
+    box-shadow:
+        0 8px 24px
+        rgba(
+            69,
+            161,
+            125,
+            0.15
+        );
+}
+.time-slot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.empty-slot-message {
+    padding: 24px;
+    border-radius: 20px;
+    background: #f0f7f4;
+    color: #61726b;
+    text-align: center;
+    border: 1px solid #dbece4;
+}
+
+.time-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 20px;
+    border: 1px solid #dfe7e4;
+    background: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.time-slot.available:hover {
+    background: #ecf8f1;
+    border-color: #3bc08d;
+    transform: translateY(-1px);
+}
+
+.time-slot.unavailable {
+    opacity: 0.55;
+    cursor: not-allowed;
+    background: #f7fbfc;
+    border-color: #e2e8f0;
+}
+
+.time-slot.selected {
+    border: 2px solid #3bc08d;
+    background: #ebf9f1;
+}
+
+.time-range {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.status-badge {
+    min-width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.status-badge.available {
+    background: #45a17d;
+}
+
+.status-badge.unavailable {
+    background: #cbd5e0;
+}
+
+.status-badge {
+    min-width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 24px;
+
+    border-radius: 999px;
+
+    font-size: 1.05rem;
+    font-weight: bold;
+
+    color: white;
+}
+
+.status-badge.available {
+    background: #20c997;
+}
+
+.status-badge.unavailable {
+    background: #ef4444;
+}
+
+
+
+
+/* ======================
+   スマホ
+====================== */
+
+@media (max-width: 768px) {
+
+    .reservation-card {
+
+        padding: 24px;
+    }
+
+}

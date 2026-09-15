@@ -1,0 +1,188 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+.doctor-card {
+    background: white;
+    border-radius: 24px;
+    padding: 28px;
+    display: flex;
+    gap: 24px;
+
+    border: 1px solid #eef4f2;
+
+    box-shadow:
+        0 12px 32px
+        rgba(0, 0, 0, .06);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            69,
+            161,
+            125,
+            .15
+        );
+}
+
+.doctor-avatar {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #45a17d,
+            #5bb892
+        );
+
+    color: white;
+    font-size: 2rem;
+
+    flex-shrink: 0;
+}
+
+.doctor-content {
+    flex: 1;
+}
+
+.department-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    background: #eef9f5;
+    color: #45a17d;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    letter-spacing: .03em;
+
+    margin-bottom: 14px;
+
+    border: 1px solid rgba(
+        69,
+        161,
+        125,
+        .15
+    );
+}
+
+.doctor-name {
+    margin: 0 0 12px;
+
+    color: #2b5547;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.doctor-message {
+    margin-bottom: 20px;
+
+    color: #61726b;
+
+    line-height: 1.8;
+}
+
+:deep(.detail-btn) {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #45a17d,
+            #5bb892
+        );
+
+    border-radius: 999px;
+}
+
+:deep(.detail-btn:hover) {
+    transform: translateY(-2px);
+}
+
+.doctor-page {
+    padding: 24px;
+}
+
+.page-header {
+    padding: 24px 28px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    border: 1px solid #eef4f2;
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, .04);
+
+    margin-bottom: 32px;
+}
+
+.page-title {
+    margin: 0;
+
+    color: #2b5547;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    margin-top: 8px;
+
+    color: #61726b;
+
+    font-size: 1rem;
+}
+.doctor-card {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.doctor-card.active {
+    border: 2px solid #2b6cb0;
+    background: #ebf8ff;
+    box-shadow: 0 6px 18px rgba(43, 108, 176, 0.18);
+}
+.doctor-card.active::after {
+    content: "✓";
+
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #2b6cb0;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}

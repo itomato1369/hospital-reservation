@@ -1,0 +1,34 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@import "primeicons/primeicons.css";
+
+@import "@vuepic/vue-datepicker/dist/main.css";
+
+/* ==== */
+/* PrimeVueのDropdown */
+/* ==== */
+.p-dropdown {
+  width: 100%;
+}
+
+.p-dropdown-panel {
+  padding: 0;
+}
+
+.p-dropdown-items {
+  padding: 0;
+  margin: 0;
+}
+
+.p-dropdown-item {
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+.p-dropdown-item:last-child {
+  padding-bottom: 0.75rem;
+}

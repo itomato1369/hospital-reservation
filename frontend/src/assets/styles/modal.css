@@ -1,0 +1,164 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* =======================
+   モーダル本体
+======================= */
+
+:deep(.p-dialog) {
+
+    border: none;
+
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow:
+        0 20px 60px rgba(
+            0,
+            0,
+            0,
+            .08
+        );
+}
+
+/* =======================
+   ヘッダー
+======================= */
+
+:deep(.p-dialog-header) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef9f5 0%,
+            #ffffff 60%,
+            #f6fbff 100%
+        );
+
+    padding: 24px 32px;
+
+    border-bottom:
+        1px solid #eef4f2;
+}
+
+:deep(.p-dialog-title) {
+
+    color: #2b5547;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+}
+
+/* =======================
+   メッセージ
+======================= */
+
+.modal-message {
+
+    display: flex;
+
+    gap: 16px;
+
+    align-items: flex-start;
+
+    padding: 12px 0;
+
+    color: #61726b;
+
+    line-height: 1.8;
+}
+
+.modal-message i {
+
+    color: #45a17d;
+
+    font-size: 1.6rem;
+
+    flex-shrink: 0;
+}
+
+.modal-message p {
+
+    margin: 0;
+
+    font-size: 1rem;
+}
+
+/* =======================
+   コンテンツ
+======================= */
+
+:deep(.p-dialog-content) {
+
+    padding:
+        24px
+        32px;
+}
+
+/* =======================
+   フッター
+======================= */
+
+:deep(.p-dialog-footer) {
+
+    padding:
+        0
+        32px
+        32px;
+}
+
+/* =======================
+   確認ボタン
+======================= */
+
+:deep(.p-button.modal-ok-button) {
+
+    min-width: 180px;
+
+    height: 52px;
+
+    border-radius: 999px;
+
+    border: none !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #45a17d,
+            #5bb892
+        ) !important;
+
+    color: white !important;
+
+    font-weight: 600;
+
+    transition: all .2s ease;
+}
+
+:deep(.p-button.modal-ok-button:hover) {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(
+            69,
+            161,
+            125,
+            .25
+        );
+}
+
+/* =======================
+   背景オーバーレイ
+======================= */
+
+:deep(.p-dialog-mask) {
+
+    backdrop-filter:
+        blur(6px);
+}

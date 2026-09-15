@@ -1,0 +1,120 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+.schedule-page {
+    padding: 32px;
+}
+
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 32px;
+
+    background: white;
+    padding: 24px 28px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, .05);
+}
+
+.doctor-title {
+    margin: 0;
+
+    color: #2b5547;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.doctor-subtitle {
+    margin-top: 6px;
+
+    color: #61726b;
+
+    font-size: 1rem;
+}
+
+.schedule-card {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.05);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.schedule-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(
+            69,
+            161,
+            125,
+            .15
+        );
+}
+
+.weekday {
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    color: #2b5547;
+}
+
+:deep(.back-btn) {
+    min-width: 140px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #45a17d,
+            #5bb892
+        );
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: all .2s ease;
+}
+
+:deep(.back-btn:hover) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px
+        rgba(
+            69,
+            161,
+            125,
+            .25
+        );
+}

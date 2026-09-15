@@ -1,0 +1,75 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* ======================
+   全体レイアウト
+====================== */
+
+.app-layout {
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef9f5 0%,
+            #ffffff 60%,
+            #f6fbff 100%
+        );
+}
+
+/* ======================
+   HeaderとFooterの間
+====================== */
+
+.layout-container {
+
+    flex: 1;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+/* ======================
+   メインコンテンツ
+====================== */
+
+.content {
+
+    flex: 1;
+
+    padding: 24px;
+
+    overflow-y: auto;
+
+    min-height: calc(100vh - 140px);
+
+    min-width: 0;
+
+    /* scrollbar-gutter: stable; */
+}
+
+/* ======================
+   スマホ
+====================== */
+
+@media (max-width: 768px) {
+
+    .layout-container {
+
+        flex-direction: column;
+    }
+
+    .content {
+
+        padding: 16px;
+    }
+}

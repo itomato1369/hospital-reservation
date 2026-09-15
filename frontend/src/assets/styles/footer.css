@@ -1,0 +1,64 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* ======================
+   Footer
+====================== */
+
+.app-footer {
+
+    height: 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 32px;
+
+    background: white;
+
+    border-top: 1px solid #eef4f2;
+
+    color: #61726b;
+
+    font-size: .9rem;
+}
+
+/* ======================
+   左側
+====================== */
+
+.footer-left {
+
+    font-weight: 500;
+}
+
+/* ======================
+   右側
+====================== */
+
+.footer-right {
+
+    color: #8a9791;
+}
+
+/* ======================
+   スマホ
+====================== */
+
+@media (max-width: 768px) {
+
+  * .app-footer {
+
+        height: auto;
+
+        flex-direction: column;
+
+        gap: 6px;
+
+        padding: 16px;
+    }
+}

@@ -1,0 +1,120 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+.custom-calendar {
+    width: 100%;
+    max-width: 600px; /* 前回の広いサイズ感（600px）ベースに調整 */
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    user-select: none;
+}
+
+/* ヘッダー */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0 8px;
+}
+
+.month-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d3748;
+    letter-spacing: 0.5px;
+}
+
+.nav-btn {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: #edf2f7;
+    color: #319795;
+    border-color: #cbd5e0;
+}
+
+/* 曜日 */
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #a0aec0;
+    margin-bottom: 16px;
+}
+
+.weekday.sun {
+    color: #e53e3e;
+}
+
+.weekday.sat {
+    color: #3182ce;
+}
+
+/* 日付グリッド */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px; /* 広めのサイズに合わせてセル間の隙間を最適化 */
+}
+
+.day-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d3748;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.day-cell.empty {
+    cursor: default;
+}
+
+.day-cell:not(.empty):not(.disabled):hover {
+    background: #e6fffa;
+    color: #319795;
+}
+
+/* 今日 */
+.day-cell.today {
+    border: 2px solid #319795;
+}
+
+/* 選択日 */
+.day-cell.selected {
+    background: #319795 !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(49, 151, 149, 0.3);
+}
+
+/* 無効日（過去・日曜日・休診日） */
+.day-cell.disabled {
+    color: #cbd5e0;
+    background: transparent;
+    cursor: not-allowed;
+}

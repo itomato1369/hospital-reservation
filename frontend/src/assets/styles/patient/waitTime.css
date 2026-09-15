@@ -1,0 +1,168 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* ======================
+   患者向け待ち時間ページ
+====================== */
+.wait-time-page {
+    padding: 24px;
+    background-color: #f4f8f6;
+    min-height: 100vh;
+}
+
+.wait-card {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(43, 85, 71, 0.05);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eef9f5;
+}
+
+.page-title {
+    margin: 0;
+    color: #2b5547;
+    font-size: 1.85rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    margin-top: 8px;
+    color: #61726b;
+}
+
+.alert-box {
+    padding: 24px;
+    background: #f8fbfa;
+    border-radius: 16px;
+    color: #61726b;
+    text-align: center;
+    font-weight: 600;
+    border: 1px dashed #d1e7e0;
+}
+
+.wait-cards {
+    display: grid;
+    gap: 20px;
+}
+
+.wait-item-card {
+    background: #f9fdfb;
+    border: 1px solid #e7f2ed;
+    border-radius: 24px;
+    padding: 28px;
+}
+
+.wait-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card-label {
+    margin: 0 0 8px;
+    color: #61726b;
+    font-size: 0.95rem;
+}
+
+.card-value {
+    margin: 0;
+    color: #2b5547;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #e7f6ec;
+    color: #2b5547;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.wait-card-body {
+    display: grid;
+    gap: 24px;
+}
+
+.wait-time-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.wait-time-label {
+    color: #61726b;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.wait-time-value {
+    display: flex;
+    align-items: baseline;
+    color: #2b5547;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.wait-time-value small {
+    margin-left: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.wait-info-grid {
+    display: grid;
+    gap: 14px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: inset 0 0 0 1px #eef9f5;
+}
+
+.info-label {
+    color: #61726b;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .wait-time-page {
+        padding: 16px;
+    }
+
+    .wait-card {
+        padding: 24px;
+    }
+
+    .wait-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wait-time-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

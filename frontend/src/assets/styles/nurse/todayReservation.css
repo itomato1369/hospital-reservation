@@ -1,0 +1,209 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* ======================
+   画面・カード共通 (マイページと統一)
+====================== */
+.info-page {
+    padding: 24px;
+    background-color: #f4f8f6;
+    min-height: 100vh;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(43, 85, 71, 0.05);
+}
+
+/* ======================
+   ヘッダー
+====================== */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eef9f5;
+}
+
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 260px;
+}
+
+.filter-label {
+    color: #61726b;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.filter-dropdown {
+    width: 100%;
+}
+
+.page-title {
+    margin: 0;
+    color: #2b5547;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    margin: 6px 0 0 0;
+    color: #61726b;
+    font-size: 0.95rem;
+}
+
+.badge-count {
+    background: #eef9f5;
+    color: #2b5547;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ======================
+   アラート・メッセージ
+====================== */
+.alert-box {
+    padding: 24px;
+    background: #f8fbfa;
+    border-radius: 16px;
+    color: #61726b;
+    text-align: center;
+    font-weight: 600;
+    border: 1px dashed #d1e7e0;
+}
+
+/* ======================
+   テーブルレイアウト
+====================== */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.reservation-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.reservation-table th,
+.reservation-table td {
+    padding: 16px 20px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.reservation-table th {
+    background: #f8fbfa;
+    color: #61726b;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #eef9f5;
+}
+
+.reservation-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.reservation-table tbody tr:hover {
+    background-color: #f8fbfa;
+}
+
+.reservation-table td {
+    border-bottom: 1px solid #eef9f5;
+    color: #2b5547;
+    vertical-align: middle;
+    font-size: 0.95rem;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.text-muted {
+    color: #8c9e97;
+    font-size: 0.85rem;
+}
+
+/* ======================
+   各種パーツ・バッジ
+====================== */
+.time-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #f0f7f4;
+    color: #2b5547;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.visit-type-badge {
+    font-size: 0.85rem;
+    color: #516b61;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-reserved {
+    background: #eef9f5;
+    color: #2b5547;
+}
+
+.status-other {
+    background: #fff4e5;
+    color: #b36b00;
+}
+
+/* ======================
+   管理ボタンのカスタム
+====================== */
+:deep(.custom-manage-btn) {
+    border: none !important;
+    border-radius: 999px !important;
+    background: #2b5547 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 6px 14px !important;
+    box-shadow: none !important;
+    transition: background-color 0.2s ease !important;
+}
+
+:deep(.custom-manage-btn:hover) {
+    background: #1f3e33 !important;
+}
+
+/* ======================
+   レスポンシブ対応
+====================== */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    
+    .profile-card {
+        padding: 16px;
+    }
+}

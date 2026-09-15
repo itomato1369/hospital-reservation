@@ -1,0 +1,198 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* ======================
+   Header
+====================== */
+
+.app-header {
+
+    height: 80px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 32px;
+
+    background: white;
+
+    border-bottom:
+        1px solid #eef4f2;
+
+    box-shadow:
+        0 4px 20px rgba(
+            0,
+            0,
+            0,
+            .04
+        );
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+/* ======================
+   左側
+====================== */
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+/* ======================
+   ロゴ
+====================== */
+
+.header-logo {
+
+    width: 56px;
+
+    height: 56px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+/* ======================
+   タイトル
+====================== */
+
+.header-title {
+
+    margin: 0;
+
+    color: #2b5547;
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+}
+
+.header-subtitle {
+
+    margin: 0;
+
+    color: #61726b;
+
+    font-size: .85rem;
+}
+
+/* ======================
+   右側
+====================== */
+
+.header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+/* ======================
+   ユーザー
+====================== */
+
+.header-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #3b4d46;
+
+    font-weight: 600;
+}
+
+.header-user i {
+
+    color: #45a17d;
+
+    font-size: 1.1rem;
+}
+
+/* ======================
+   ログアウト
+====================== */
+
+:deep(.logout-btn) {
+
+    min-width: 150px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #45a17d,
+            #5bb892
+        );
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: all .2s ease;
+}
+
+:deep(.logout-btn:hover) {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(
+            69,
+            161,
+            125,
+            .25
+        );
+}
+
+@media (max-width: 768px) {
+
+    .app-header {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 16px;
+    }
+
+    .header-right {
+
+        margin-top: 12px;
+    }
+
+    .header-title {
+
+        font-size: 1.1rem;
+    }
+}
+.header-clock {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+}

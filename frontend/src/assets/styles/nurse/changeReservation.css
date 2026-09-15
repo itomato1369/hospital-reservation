@@ -1,0 +1,42 @@
+.change-status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+}
+
+.status-card:hover .status-icon {
+    transform: scale(1.05);
+}
+
+.status-icon {
+    width: 96px;
+    height: 96px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.status-icon.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.status-label {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.status-message {
+    text-align: center;
+    min-height: 1.5rem;
+}

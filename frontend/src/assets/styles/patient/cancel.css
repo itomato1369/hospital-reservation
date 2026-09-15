@@ -1,0 +1,144 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+/* ======================
+   画面・カード共通 (マイページと統一)
+====================== */
+.info-page {
+    padding: 24px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 32px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
+}
+
+/* ======================
+   ヘッダー
+====================== */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eef9f5;
+}
+
+.page-title {
+    margin: 0;
+    color: #2b5547;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    margin-top: 8px;
+    color: #61726b;
+}
+
+/* ======================
+   アラート・メッセージ
+====================== */
+.alert-box {
+    padding: 20px;
+    background: #f8fbfa;
+    border-radius: 16px;
+    color: #61726b;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ======================
+   テーブルレイアウト
+====================== */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.reservation-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+}
+
+.reservation-table th,
+.reservation-table td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+.reservation-table th {
+    background: #f8fbfa;
+    color: #61726b;
+    font-weight: 600;
+    border-bottom: 2px solid #eef9f5;
+}
+
+.reservation-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.reservation-table tbody tr:hover {
+    background-color: #f8fbfa;
+}
+
+.reservation-table td {
+    border-bottom: 1px solid #eef9f5;
+    color: #2b5547;
+    vertical-align: middle;
+}
+
+/* ======================
+   キャンセルボタン（完全に微動させない設定）
+====================== */
+/* ======================
+   キャンセルボタン（動かない・色変更のみ）
+====================== */
+:deep(.cancel-btn) {
+    border: none !important;
+    border-radius: 999px;
+    background: #e66b6b;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    box-shadow: none !important;
+    transform: none !important;
+    /* 動きを伴わず、背景色だけを滑らかに変化させる */
+    transition: background-color 0.2s ease !important;
+}
+
+:deep(.cancel-btn:hover) {
+    background: #d45555 !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+:deep(.cancel-btn:focus),
+:deep(.cancel-btn:active) {
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+
+/* ======================
+   レスポンシブ対応
+====================== */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    
+    .profile-card {
+        padding: 16px;
+    }
+}

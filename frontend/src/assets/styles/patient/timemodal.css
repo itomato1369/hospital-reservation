@@ -1,0 +1,47 @@
+/**
+ * @note このファイルの主要なロジックおよび関数の大部分はAI（生成AI）によって作成されています。
+ * メンテナンスや改修時はAI生成コードであることを念頭に置いてレビューしてください。
+ */
+.time-slot-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.section-title {
+    font-weight: bold;
+    font-size: 15px;
+    color: #2d3748;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 4px;
+}
+.mt-4 {
+    margin-top: 16px;
+}
+.time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-bottom: 1px solid #edf2f7;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.time-row:hover:not(.disabled) {
+    background: #e6fffa;
+}
+.time-row.disabled {
+    color: #a0aec0;
+    cursor: not-allowed;
+    background: #f7fafc;
+}
+.time-status {
+    font-weight: bold;
+    font-size: 16px;
+}
+.time-status.available {
+    color: #319795; /* O */
+}
+.time-status.booked {
+    color: #e53e3e; /* x */
+}
