@@ -15,8 +15,6 @@ AIを活用した開発手法および機能の実装を学ぶ。
 - AIアシスタントに対する適切なプロンプトの設計・入力スキルを磨き、
    コーディングや設計の効率を最大化する方法を学ぶ。
 
- [dx](https://github.com/itomato1369/hospital-reservation/edit/main/README.md)
-
 ---   
 
 ## 🎯 プロジェクト目的
